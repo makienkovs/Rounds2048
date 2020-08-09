@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Rounds 2048</string>
+    <string name="movies">Movies:\u0020</string>
+    <string name="score">Score:\u0020</string>
+    <string name="best">Best:\u0020</string>
+    <string name="timer">00:00:00</string>
+    <string name="sound">Sound</string>
+    <string name="vibration">Vibration</string>
+    <string name="classic">Classic mode</string>
+    <string name="prog">Progressive mode</string>
+    <string name="market">App in Google play</string>
+    <string name="contact">Contact the developer</string>
+    <string name="settings">Settings</string>
+    <string name="Ok" translatable="false">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="win">Victory</string>
+    <string name="winMessage">You took the 2048 and win! Would you like to continue or start new game?</string>
+    <string name="continueString">Continue</string>
+    <string name="newGame">New game</string>
+    <string name="newGameMessage">Would you like to start a new game?</string>
+    <string name="loseMessage">There are no available moves. Would you like to start a new game?</string>
+    <string name="lose">The end of the game</string>
+    <string name="applink" translatable="false">market://details?id=com.makienkovs.rounds2048</string>
+    <string name="email" translatable="false">makienkovs@gmail.com</string>
+    <string name="subject">About Rounds 2048 App</string>
+    <string name="sending">Sending Email</string>
+</resources>

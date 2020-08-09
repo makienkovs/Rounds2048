@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Круги 2048</string>
+    <string name="movies">Ходы:\u0020</string>
+    <string name="score">Счет:\u0020</string>
+    <string name="best">Лучший счет:\u0020</string>
+    <string name="timer">00:00:00</string>
+    <string name="sound">Звук</string>
+    <string name="vibration">Вибрация</string>
+    <string name="classic">Классический режим</string>
+    <string name="prog">Прогрессивный режим</string>
+    <string name="market">Приложение в Google play</string>
+    <string name="contact">Связь с разработчиком</string>
+    <string name="settings">Настройки</string>
+    <string name="cancel">Отмена</string>
+    <string name="win">Победа</string>
+    <string name="winMessage">Вы добрались до 2048 и победили! Хотите продолжить или начать новую игру?</string>
+    <string name="continueString">Продолжить</string>
+    <string name="newGame">Новая игра</string>
+    <string name="newGameMessage">Хотите начать новую игру?</string>
+    <string name="loseMessage">Больше нет возможных ходов. Хотите начать новую игру?</string>
+    <string name="lose">Конец игры</string>
+    <string name="subject">О приложении Круги 2048</string>
+    <string name="sending">Отправка Email</string>
+</resources>

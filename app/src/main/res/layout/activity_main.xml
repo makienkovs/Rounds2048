@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/score"
+        android:textColor="@color/colorTextDark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/movies"
+        app:layout_constraintTop_toBottomOf="@+id/movies" />
+
+    <TextView
+        android:id="@+id/best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/best"
+        android:textColor="@color/colorTextDark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/reload"
+        android:onClick="newGame"
+        app:layout_constraintEnd_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/settings"
+        android:onClick="settings"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/movies"
+        android:textColor="@color/colorTextDark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/timer"
+        android:textColor="@color/colorTextDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/field"
+        android:backgroundTint="@color/colorBack"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack10"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack01"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack11"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack02"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack00"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack12"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack03"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack01"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack02"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack20"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack00" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack21"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack10"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack01" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack22"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack11"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack02" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack12"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack03" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack30"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack21"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack10" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack31"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack22"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack20"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack11" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack32"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack23"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack21"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack12" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cellBack33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack22"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack13" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack31"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack20" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack32"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack30"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack21" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cellBack33"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack31"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack22" />
+
+        <com.makienkovs.rounds2048.CellBack
+            android:id="@+id/cellBack33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cellBack32"
+            app:layout_constraintTop_toBottomOf="@+id/cellBack23" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell00"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell10"
+            app:layout_constraintEnd_toStartOf="@+id/cell01"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell11"
+            app:layout_constraintEnd_toStartOf="@+id/cell02"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell00"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell12"
+            app:layout_constraintEnd_toStartOf="@+id/cell03"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell01"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell02"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell20"
+            app:layout_constraintEnd_toStartOf="@+id/cell11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cell00" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell21"
+            app:layout_constraintEnd_toStartOf="@+id/cell12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell10"
+            app:layout_constraintTop_toBottomOf="@+id/cell01" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell22"
+            app:layout_constraintEnd_toStartOf="@+id/cell13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell11"
+            app:layout_constraintTop_toBottomOf="@+id/cell02" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell12"
+            app:layout_constraintTop_toBottomOf="@+id/cell03" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell30"
+            app:layout_constraintEnd_toStartOf="@+id/cell21"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cell10" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell31"
+            app:layout_constraintEnd_toStartOf="@+id/cell22"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell20"
+            app:layout_constraintTop_toBottomOf="@+id/cell11" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell32"
+            app:layout_constraintEnd_toStartOf="@+id/cell23"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell21"
+            app:layout_constraintTop_toBottomOf="@+id/cell12" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cell33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell22"
+            app:layout_constraintTop_toBottomOf="@+id/cell13" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cell31"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cell20" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cell32"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell30"
+            app:layout_constraintTop_toBottomOf="@+id/cell21" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cell33"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell31"
+            app:layout_constraintTop_toBottomOf="@+id/cell22" />
+
+        <com.makienkovs.rounds2048.Cell
+            android:id="@+id/cell33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cell32"
+            app:layout_constraintTop_toBottomOf="@+id/cell23" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
